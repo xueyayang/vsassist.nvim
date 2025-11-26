@@ -603,6 +603,16 @@ theme.link_highlight = function()
     hl(0, 'CmpItemKindConstant', { link = '@constant' })
     hl(0, 'CmpItemKindStruct', { link = '@structure' })
     hl(0, 'CmpItemKindTypeParameter', { link = '@parameter' })
+    
+    -- blink.cmp integration
+    local status_ok, blink_cmp = pcall(require, "vsassist.groups.integrations.blink_cmp")
+    if status_ok then
+        local c = require('vsassist.colors').get_colors()
+        local highlights = blink_cmp.get(c)
+        for group, settings in pairs(highlights) do
+            hl(0, group, settings)
+        end
+    end
 end
 
 return theme
