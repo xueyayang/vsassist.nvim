@@ -1,6 +1,6 @@
 # 修改内容
 
-此版本添加了对 [blink.cmp](https://github.com/Saghen/blink.cmp) 插件的支持，改进了补全菜单的配色方案。
+此版本添加了对 [blink.cmp](https://github.com/Saghen/blink.cmp) 插件的支持，改进了补全菜单的配色方案。具体的颜色配置实现在 [blink_cmp.lua](lua/vsassist/groups/integrations/blink_cmp.lua) 文件中。
 
 ---
 
